@@ -21,6 +21,10 @@ export class ListComponent {
     this.canalService.canals.subscribe(data => this.canals = data);
   }
 
+  /**
+   * Retourne le canal en fonction de l'identifiant
+   * @param id Identifiant du canal
+   */
   public choiceCanal(id: number): void {
     localStorage.setItem(GlobalVariable.NameIdCanalSession, id.toString());
     // On recharge la page

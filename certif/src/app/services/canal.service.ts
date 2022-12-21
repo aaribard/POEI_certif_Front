@@ -63,6 +63,31 @@ export class CanalService {
     this.httpClient.post(url, canal, options).subscribe(reponse => console.log(reponse));
   }
 
+  /**
+   * Mise à jour du canal
+   * @param url Mise à jour d'un canal
+   * @param canal canal au format JSON
+   */
+  public updateCanal(url: string, canal: any) {
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    const options = { headers };
+
+    this.httpClient.post(url, canal, options).subscribe(reponse => console.log(reponse));
+  }
+
+  /**
+   * Suppression
+   * @param url suppression d'un canal
+   * @param canal canal au format JSON
+   */
+  public deleteCanal(url: string, canal: any) {
+    this.httpClient.delete(url, canal).subscribe(reponse => console.log(reponse));
+  }
+
   // ---------------------------
   // GETTERS
   // ---------------------------
