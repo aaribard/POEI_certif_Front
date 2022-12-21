@@ -1,0 +1,91 @@
+<div class="container-fluid">
+
+  <core-header></core-header>
+
+  <!-- Entete -->
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>
+        <p class="text-center">{{ idcanalsession }} - {{ canal.nom }}</p>
+      </h2>
+    </div>
+
+    <hr />
+
+    <!-- Corps de la page -->
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="col-sm-12">
+          <canal-add></canal-add>
+        </div>
+
+        <div class="col-sm-12">
+          <canal-list></canal-list>
+        </div>
+
+        <div class="col-sm-12">
+          <canal-edit></canal-edit>
+        </div>
+      </div>
+
+      <div class="col-sm-8">
+
+        <div class="card mb-3 shadow rounded">
+          <div class="card-header font-weight-bold">
+            *Votre message
+          </div>
+          <div class="card-body">
+            <div class="col-sm-12">
+              <form action="">
+                <div class="col-sm-12 form-group">
+                  <div class="col-sm-12">
+                    <input type="text" id="message" class="form-control" placeholder="votre message">
+                  </div>
+                  <br />
+                  <div class="col-sm-12">
+                    <button class="btn btn-outline-success" type="submit">*Publier</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card mb-3 shadow rounded">
+          <div class="card-header font-weight-bold bg-local-message-titre-head">
+            *Messages
+          </div>
+          <div class="card-body bg-local-message-titre">
+
+            <div class="col-sm-12">
+
+              <div class="card mb-3 shadow rounded">
+                <div class="card-header font-weight-bold bg-local-message-head">
+                  **04/11/2022 18:05:20 - Napoleon
+                </div>
+                <div class="card-body bg-local-message">
+                  *Message 1
+                </div>
+              </div>
+
+              <div class="card mb-3 shadow rounded">
+                <div class="card-header font-weight-bold bg-local-message-head">
+                  *05/11/2022 10:10:15 - Bonaparte
+                </div>
+                <div class="card-body bg-local-message">
+                  **Message 2
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <core-footer></core-footer>
+  </div>
