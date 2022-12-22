@@ -1,0 +1,29 @@
+<div class="card mb-3 shadow rounded border-primary">
+    <div class="card-header font-weight-bold">
+        Liste des canaux
+    </div>
+    <div class="card-body">
+        <div class="col-sm-12">
+            <table class="table table-hover" *ngIf="canals.length; else noCanalMessage">
+                <tbody>
+                    <tr *ngFor=" let canal of canals; let i=index">
+                        <td>
+                            <div class="d-grid gap-2">
+
+                                <button class="btn btn-secondary" (click)="choiceCanal(canal.id)">
+                                    {{ canal?.id }} - {{ canal?.nom }}
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ng-template #noCanalMessage>
+                <div>
+                    Aucun canal dans la base de données
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

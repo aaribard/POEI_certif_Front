@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { ModulesModule } from './modules/modules.module';
+import { MessageService } from './services/message.service';
+import { CanalService } from './services/canal.service';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    CoreModule,
+    ModulesModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

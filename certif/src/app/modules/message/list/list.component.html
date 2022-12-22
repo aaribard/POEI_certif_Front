@@ -1,0 +1,24 @@
+<div class="card mb-3 shadow rounded">
+    <div class="card-header font-weight-bold bg-local-message-titre-head">
+      *Messages
+    </div>
+    <div class="card-body bg-local-message-titre message-container"  *ngIf="messages.length; else noMessage">
+
+      <div class="col-sm-12" *ngFor="let message of messages">
+
+        <div class="card mb-3 shadow rounded">
+          <div class="card-header font-weight-bold bg-local-message-head">
+            {{message.datecreation | date : 'dd MMMM YYYY à HH:mm'}} - {{message.utilisateur.login}}
+          </div>
+          <div class="card-body bg-local-message">
+            {{message.corps}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noMessage>
+        <div>
+            Aucun Message dans la base de données
+        </div>
+    </ng-template>
+  </div>

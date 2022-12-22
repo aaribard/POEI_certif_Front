@@ -1,0 +1,39 @@
+<div class="container-fluid">
+
+  <core-header></core-header>
+
+  <!-- Entete -->
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>
+        <p class="text-center">{{ canal?.id }} - {{ canal?.nom }}</p>
+      </h2>
+    </div>
+
+    <hr />
+
+    <!-- Corps de la page -->
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="col-sm-12">
+          <canal-add></canal-add>
+        </div>
+
+        <div class="col-sm-12">
+          <canal-list></canal-list>
+        </div>
+
+        <div class="col-sm-12">
+          <canal-edit></canal-edit>
+        </div>
+      </div>
+
+      <div class="col-sm-8">
+        <message-add></message-add>
+        <message-list></message-list>
+      </div>
+    </div>
+    <utilisateur-list></utilisateur-list>
+    <core-footer></core-footer>
+  </div>
