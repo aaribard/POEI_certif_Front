@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ModulesModule } from './modules/modules.module';
+import { MessageService } from './services/message.service';
+import { CanalService } from './services/canal.service';
 
 @NgModule({
   declarations: [
