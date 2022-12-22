@@ -18,27 +18,13 @@ export class AppComponent implements OnInit{
 
   constructor(
     private canalService: CanalService,
-    private route: ActivatedRoute
   ) {
-
-    // this.id = Number(this.route.snapshot.paramMap.get('id'));
-
-    // Demarrage de l'appli
-    // Definition du canal par defaut
-    // I. cannalService. Get Cannal (id$1)
-    // 2. serviceCannal . set canal (currentCanal)
-
-    // Id du canal choisi mis en cache de session
-    /*this.idcanalsession = Number(localStorage.getItem(GlobalVariable.NameIdCanalSession));
-    if (this.idcanalsession == null) {
-      this.idcanalsession = GlobalVariable.idCanalGeneral;
-    }*/
-
   }
+  
   ngOnInit(): void {
       // On recupere le canal choisi
     this.canalService.getCanal(GlobalVariable.appUrlCanalFindByID, 1);
-    this.canalService.canal.subscribe((data:any) => this.canal = data);
+    this.canalService.canal.subscribe((data: any) => this.canal = data);
   }
   
 }

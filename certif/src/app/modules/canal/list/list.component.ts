@@ -15,12 +15,11 @@ export class ListComponent {
 
   constructor(
     private canalService: CanalService,
-    private messageService: MessageService,
-    private httpClient: HttpClient
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
-    this.canalService.canals.subscribe(data => this.canals = data);
+    this.canalService.canals.subscribe((data: any) => this.canals = data);
   }
 
   /**
