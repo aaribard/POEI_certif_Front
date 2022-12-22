@@ -3,18 +3,18 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { ModulesRoutingModule } from './modules-routing.module';
-import { AddComponent as CanalAddComponent} from './canal/add/add.component';
-import { ListComponent as CanalListComponent } from './canal/list/list.component';
-import { EditComponent as CanalEditComponent } from './canal/edit/edit.component';
-import { DeleteComponent as CanalDeleteComponent } from './canal/delete/delete.component';
+import { AddComponent as UtilisateurAddComponent} from './utilisateur/add/add.component';
+import { ListComponent as UtilisateurListComponent } from './utilisateur/list/list.component';
+import { EditComponent as UtilisateurEditComponent } from './utilisateur/edit/edit.component';
+import { DeleteComponent as UtilisateurDeleteComponent } from './utilisateur/delete/delete.component';
 
 
 @NgModule({
   declarations: [
-    CanalAddComponent,
-    CanalListComponent,
-    CanalEditComponent,
-    CanalDeleteComponent
+    UtilisateurAddComponent,
+    UtilisateurListComponent,
+    UtilisateurEditComponent,
+    UtilisateurDeleteComponent
   ],
   imports: [
     CommonModule,
@@ -22,10 +22,10 @@ import { DeleteComponent as CanalDeleteComponent } from './canal/delete/delete.c
     ModulesRoutingModule
   ],
   exports: [
-    CanalAddComponent,
-    CanalListComponent,
-    CanalEditComponent,
-    CanalDeleteComponent
+    UtilisateurAddComponent,
+    UtilisateurListComponent,
+    UtilisateurEditComponent,
+    UtilisateurDeleteComponent
   ]
 })
 export class ModulesModule { }

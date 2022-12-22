@@ -19,5 +19,4 @@ export class ListComponent {
   ngOnInit(): void {
     this.utilisateurService.utilisateurs.subscribe(data => this.utilisateurs = data);
   }
-
 }

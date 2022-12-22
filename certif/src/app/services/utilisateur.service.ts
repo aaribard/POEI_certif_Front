@@ -53,7 +53,7 @@ export class UtilisateurService {
    * @param url url de creation
    * @param utilisateur utilisateur au format JSON
    */
-  public createUtilisateur(url: string, utilisateur: Utilisateur) {
+  public createUtilisateur(url: string, utilisateur: Partial<any>) {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ export class UtilisateurService {
    * @param url Mise à jour d'un utilisateur
    * @param utilisateur utilisateur au format JSON
    */
-  public updateUtilisateur(url: string, utilisateur: Utilisateur) {
+  public updateUtilisateur(url: string, utilisateur: Partial<any>) {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
