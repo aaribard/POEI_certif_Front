@@ -6,10 +6,10 @@
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-12">
-                    <label for="nom">[ {{ canal.id }} - {{ canal.nom }} ]</label>
-                    <input class="form-control" type="hidden" id="id" value="{{ canal.id }}"
+                    <label for="nom">[ {{ canal?.id }} - {{ canal?.nom }} ]</label>
+                    <input class="form-control" type="hidden" id="id" value="{{ canal?.id }}"
                         [formControl]="formEditCanal.controls.id">
-                    <input class="form-control" type="text" id="nom" [(ngModel)]="canal.nom"
+                    <input class="form-control" type="text" id="nom" value="{{ canal?.nom }}"
                         [formControl]="formEditCanal.controls.nom">
                 </div>
             </div>

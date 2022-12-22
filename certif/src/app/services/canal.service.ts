@@ -44,7 +44,7 @@ export class CanalService {
    */
   public getCanal(url: string, id: number) {
     url = GlobalVariable.appUrlCanalFindByID + "?id=" + id;
-    this.httpClient.get(url).subscribe(reponse => this.canal.next(reponse));
+    this.httpClient.get(url).subscribe(reponse => this._canal.next(reponse));
   }
 
   /**
