@@ -6,15 +6,15 @@ import { NotfoundComponent } from './notfound/notfound/notfound.component';
 const routes: Routes = [
 
   {
-    path: '',
+    path: 'accueil',
     component: AppComponent 
   },
 
   {
-    path: ':idcanal',
-    component: AppComponent 
+    path:'',
+    redirectTo:'accueil',
+    pathMatch:'full'
   },
-
 
   // Not found Page
   // WildCard Route

@@ -1,1 +1,3 @@
-<p>list works!</p>
+<select [(ngModel)]="user_id" name="user-id"  id="user-id-select" (change)="changeIdUtilisateur($event)">
+    <option value={{utilisateur.id}} *ngFor="let utilisateur of utilisateurs" >{{utilisateur.login}}</option>
+</select>
