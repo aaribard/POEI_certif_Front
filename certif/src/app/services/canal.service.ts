@@ -27,6 +27,7 @@ export class CanalService {
 
   /**
    * Liste des canaux
+   * @param url url de recupération
    */
   public getCanalsFromDatabase(url: string): void {
     this.httpClient
