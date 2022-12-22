@@ -54,6 +54,5 @@ export class EditComponent {
         // On recharge la page
         window.location.reload();
       }
-      }
-  
+    }
 }
