@@ -14,7 +14,7 @@ export class AppComponent {
   public canal?: any;
 
   // id?: number;
-  idcanalsession?: number;
+  public idcanalsession: number = GlobalVariable.idCanalGeneral;
 
   constructor(
     private canalService: CanalService,

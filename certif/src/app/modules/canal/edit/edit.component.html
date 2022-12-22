@@ -1,4 +1,4 @@
-<div class="card mb-3 shadow rounded">
+<div class="card mb-3 shadow rounded border-danger" *ngIf="canal.id > 1">
     <div class="card-header font-weight-bold">
         Edition/Suppression un canal
     </div>
@@ -13,6 +13,7 @@
                         [formControl]="formEditCanal.controls.nom">
                 </div>
             </div>
+            <hr />
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <button class="btn btn-outline-success" type="submit"
