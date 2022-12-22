@@ -1,4 +1,4 @@
-<div class="card mb-3 shadow rounded">
+<div class="card mb-3 shadow rounded border-primary">
     <div class="card-header font-weight-bold">
         Liste des canaux
     </div>
@@ -8,11 +8,13 @@
                 <tbody>
                     <tr *ngFor=" let canal of canals; let i=index">
                         <td>
-                            <button class="btn" (click)="choiceCanal(canal.id)">
-                                {{ canal.id }} - {{ canal.nom }}
-                            </button>
+                            <div class="d-grid gap-2">
+
+                                <button class="btn btn-secondary" (click)="choiceCanal(canal.id)">
+                                    {{ canal?.id }} - {{ canal?.nom }}
+                                </button>
+                            </div>
                         </td>
-                        <td><button class="btn-close"></button></td>
                     </tr>
                 </tbody>
             </table>

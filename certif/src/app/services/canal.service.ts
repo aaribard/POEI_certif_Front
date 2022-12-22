@@ -44,7 +44,7 @@ export class CanalService {
    */
   public getCanal(url: string, id: number) {
     url = GlobalVariable.appUrlCanalFindByID + "?id=" + id;
-    this.httpClient.get(url).subscribe(reponse => this.canal.next(reponse));
+    this.httpClient.get(url).subscribe(reponse => this._canal.next(reponse));
   }
 
   /**
@@ -84,8 +84,9 @@ export class CanalService {
    * @param url suppression d'un canal
    * @param canal canal au format JSON
    */
-  public deleteCanal(url: string, canal: any) {
-    this.httpClient.delete(url, canal).subscribe(reponse => console.log(reponse));
+  public deleteCanal(url: string, id: number) {
+    url = GlobalVariable.appUrlCanalDelete + "?id=" + id;
+    this.httpClient.delete(url).subscribe(reponse => console.log(reponse));
   }
 
   // ---------------------------
