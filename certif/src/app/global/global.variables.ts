@@ -25,9 +25,15 @@ export class GlobalVariable {
     public static appUrlMessageList: string = this.appUrlMessage + this.appUrlList;
     public static appUrlMessageAdd: string = this.appUrlMessage + this.appUrlSave;
     public static appUrlMessageFindByCanal: string = this.appUrlMessage + this.appUrlFindByCanal;
+    public static appUrlMessageDelete: string = this.appUrlMessage + this.appUrlDelete;
+    public static appUrlMessageEdit: string = this.appUrlMessage + this.appUrlEdit;
+    public static appUrlMessageFindByID: string = this.appUrlMessage + this.appUrlFindById;
 
     public static appUrlUtilisateur = this.appUrl + "/utilisateur";
     public static appUrlUtilisateurList: string = this.appUrlUtilisateur + this.appUrlList;
     public static appUrlUtilisateurFindByID: string = this.appUrlUtilisateur + this.appUrlFindById;
+    public static appUrlUtilisateurAdd: string = this.appUrlUtilisateur + this.appUrlSave;
+    public static appUrlUtilisateurDelete: string = this.appUrlUtilisateur + this.appUrlDelete;
+    public static appUrlUtilisateurEdit: string = this.appUrlUtilisateur + this.appUrlEdit;
 
 }
