@@ -33,7 +33,6 @@ export class MessageService {
       .get(url)
       .subscribe(reponse => {
         this._messages.next(reponse);
-      
       })
   }
 
@@ -42,9 +41,9 @@ export class MessageService {
    * @param url url de recupération
    * @param id  identifiant du canal
    */
-  public getMessageByCanal(url: string, id: number) {
+  public getMessagesByCanal(url: string, id: number) {
     url = GlobalVariable.appUrlMessageFindByCanal + "?id=" + id;
-    this.httpClient.get(url).subscribe(reponse => this._message.next(reponse));
+    this.httpClient.get(url).subscribe(reponse => this._messages.next(reponse));
   }
 
   /**
@@ -52,7 +51,7 @@ export class MessageService {
    * @param url url de creation
    * @param message message au format JSON
    */
-  public createMessage(url: string, message: Message) {
+  public createMessage(url: string, message: Partial<any>) {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -68,7 +67,7 @@ export class MessageService {
    * @param url Mise à jour d'un message
    * @param message message au format JSON
    */
-  public updateMessage(url: string, message: Message) {
+  public updateMessage(url: string, message: Partial<any>) {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -92,11 +91,11 @@ export class MessageService {
   // ---------------------------
   // GETTERS
   // ---------------------------
-  public get canals() {
+  public get messages() {
           return this._messages;
   }
   
-  public get canal() {
+  public get message() {
           return this._message;
   }
 }

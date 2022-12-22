@@ -6,15 +6,18 @@ import { ModulesRoutingModule } from './modules-routing.module';
 import { AddComponent as CanalAddComponent} from './canal/add/add.component';
 import { ListComponent as CanalListComponent } from './canal/list/list.component';
 import { EditComponent as CanalEditComponent } from './canal/edit/edit.component';
-import { DeleteComponent as CanalDeleteComponent } from './canal/delete/delete.component';
-
+import { AddComponent as MessageAddComponent} from './message/add/add.component';
+import { ListComponent as MessageListComponent } from './message/list/list.component';
+import { EditComponent as MessageEditComponent } from './message/edit/edit.component';
 
 @NgModule({
   declarations: [
     CanalAddComponent,
     CanalListComponent,
     CanalEditComponent,
-    CanalDeleteComponent
+    MessageAddComponent,
+    MessageListComponent,
+    MessageEditComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,7 @@ import { DeleteComponent as CanalDeleteComponent } from './canal/delete/delete.c
     CanalAddComponent,
     CanalListComponent,
     CanalEditComponent,
-    CanalDeleteComponent
+    MessageListComponent,
   ]
 })
 export class ModulesModule { }

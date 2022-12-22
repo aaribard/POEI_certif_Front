@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FormGroup} from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { GlobalVariable } from '../global/global.variables';
 
@@ -53,14 +54,12 @@ export class CanalService {
    * @param url url de creation
    * @param canal canal au format JSON
    */
-  public createCanal(url: string, canal: any) {
+  public createCanal(url: string, canal: Partial<any>) {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-
     const options = { headers };
-
     this.httpClient.post(url, canal, options).subscribe(reponse => console.log(reponse));
   }
 
@@ -69,7 +68,7 @@ export class CanalService {
    * @param url Mise à jour d'un canal
    * @param canal canal au format JSON
    */
-  public updateCanal(url: string, canal: any) {
+  public updateCanal(url: string, canal: Partial<any>) {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -94,11 +93,14 @@ export class CanalService {
   // GETTERS
   // ---------------------------
   public get canals() {
-          return this._canals;
+    return this._canals;
   }
   
   public get canal() {
-          return this._canal;
+    return this._canal;
   }
-
+  
+  public set canal(canal: any) {
+    this._canal = canal;
+  }
 }

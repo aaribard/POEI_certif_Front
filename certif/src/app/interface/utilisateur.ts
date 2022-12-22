@@ -1,4 +1,4 @@
 export interface Utilisateur {
-    id:number ;
+    id?:number ;
     login:string;
 }
