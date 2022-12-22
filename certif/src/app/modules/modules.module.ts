@@ -28,7 +28,9 @@ import { EditComponent as MessageEditComponent } from './message/edit/edit.compo
     CanalAddComponent,
     CanalListComponent,
     CanalEditComponent,
+    MessageAddComponent,
     MessageListComponent,
+    MessageEditComponent
   ]
 })
 export class ModulesModule { }

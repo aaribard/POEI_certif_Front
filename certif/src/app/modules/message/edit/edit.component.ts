@@ -4,7 +4,7 @@ import { GlobalVariable } from 'src/app/global/global.variables';
 import { CanalService } from 'src/app/services/canal.service';
 
 @Component({
-  selector: 'canal-edit',
+  selector: 'message-edit',
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
