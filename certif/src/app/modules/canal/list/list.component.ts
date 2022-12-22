@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { GlobalVariable } from 'src/app/global/global.variables';
 import { CanalService } from 'src/app/services/canal.service';
+import { MessageService } from 'src/app/services/message.service';
 
 @Component({
   selector: 'canal-list',
@@ -14,6 +15,7 @@ export class ListComponent {
 
   constructor(
     private canalService: CanalService,
+    private messageService: MessageService,
     private httpClient: HttpClient
   ) {}
 
@@ -26,9 +28,7 @@ export class ListComponent {
    * @param id Identifiant du canal
    */
   public choiceCanal(id: number): void {
-    localStorage.setItem(GlobalVariable.NameIdCanalSession, id.toString());
-    // On recharge la page
-    window.location.reload();
+    this.canalService.getCanal(GlobalVariable.appUrlCanalFindByID, id);
+    this.messageService.getMessagesByCanal(GlobalVariable.appUrlMessageFindByCanal, id);
   }
-
 }
