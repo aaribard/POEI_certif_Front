@@ -20,6 +20,7 @@ export class AppComponent implements OnInit{
 
   constructor(
     private canalService: CanalService,
+    private utilisateurService : UtilisateurService,
     private route: ActivatedRoute
   ) {
 
