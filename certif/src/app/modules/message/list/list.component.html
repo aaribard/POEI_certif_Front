@@ -1,6 +1,6 @@
 <div class="card mb-3 shadow rounded">
     <div class="card-header font-weight-bold bg-local-message-titre-head">
-      *Messages
+      Messages
     </div>
     <div class="card-body bg-local-message-titre message-container"  *ngIf="messages.length; else noMessage">
 
@@ -8,7 +8,7 @@
 
         <div class="card mb-3 shadow rounded">
           <div class="card-header font-weight-bold bg-local-message-head">
-            {{message.datecreation | date : 'dd MMMM YYYY à HH:mm'}} - {{message.utilisateur.login}}
+            <strong>{{message.utilisateur.login}}</strong> - {{message.datecreation | date : 'HH:mm le dd MMMM YYYY'}}
           </div>
           <div class="card-body bg-local-message">
             {{message.corps}}
