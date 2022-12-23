@@ -23,7 +23,6 @@ export class CanalService {
   ) { 
     // On recupere la liste des canaux
     this.getCanalsFromDatabase(GlobalVariable.appUrlCanalList);
-    //console.log("Canal List : " + GlobalVariable.appUrlCanalList);
   }
 
   /**

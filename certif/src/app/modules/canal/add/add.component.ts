@@ -19,7 +19,7 @@ export class AddComponent {
   constructor(
     private canalService: CanalService
   ) { }
-  
+
   public submitCanal() {
     // On met à jour la valeur isroot
     this.form.controls['isroot'].setValue(0);
