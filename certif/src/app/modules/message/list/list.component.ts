@@ -23,7 +23,7 @@ export class ListComponent implements OnInit{
 
     this.canalService.canal.subscribe((data:any)=> {
       this.idcanalsession = data.id;
-      console.log(this.idcanalsession);})
+      })
     this.messageService.getMessagesByCanal(GlobalVariable.appUrlMessageFindByCanal, this.idcanalsession);
     this.messageService.messages.subscribe(data => this.messages = data);
   }

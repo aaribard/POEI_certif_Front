@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-sm-12">
       <h2>
-        <p class="text-center">{{ canal?.id }} - {{ canal?.nom }}</p>
+        <p class="text-center"># {{ canal?.nom }}</p>
       </h2>
     </div>
 
@@ -30,29 +30,10 @@
       </div>
 
       <div class="col-sm-8">
-
-        <div class="card mb-3 shadow rounded">
-          <div class="card-header font-weight-bold">
-            *Votre message
-          </div>
-          <div class="card-body">
-            <div class="col-sm-12">
-              <form action="">
-                <div class="col-sm-12 form-group">
-                  <div class="col-sm-12">
-                    <input type="text" id="message" class="form-control" placeholder="votre message">
-                  </div>
-                  <br />
-                  <div class="col-sm-12">
-                    <button class="btn btn-outline-success" type="submit">*Publier</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
         <message-list></message-list>
+        <message-add></message-add>
       </div>
     </div>
+    <utilisateur-list></utilisateur-list>
     <core-footer></core-footer>
   </div>
